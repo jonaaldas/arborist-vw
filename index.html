@@ -3,107 +3,331 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet" />
         <title>Arborist</title>
         <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            body {
-                font-family: 'Open Sans', sans-serif;
-            }
-        </style>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            body: '#DDECF3', // light blue
+                            secondary: '#637FA5', // dark blue
+                            ternary: '#C2D6B2', // green
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
-    <body class="bg-[#DDECF3]">
-        <!-- header -->
-        <div class="flex flex-row md:max-w-[65%] mb-8">
-            <div class="flex justify-center">
-                <img class="w-32 md:w-52 md:min-w-full" src="./img/logo.svg" alt="" />
+    <body class="w-full">
+        <div class="grid grid-col-1 bg-body">
+            <!-- nav bar -->
+            <div class="pl-4 text-sm text-lg text-white bg-secondary">
+                <strong><span>Rooted in Care, Growing in Trust</span> <br /></strong>
+                <strong><span>- Your ONE TREE Health and Safety Expert</span></strong>
             </div>
-
-            <div class="flex flex-col w-8/12">
-                <h1 class="mt-4 mb-4 text-xl font-bold p md:text-2xl lg:text-3xl xl:text-6xl">ONE TREE ARBORIST</h1>
-                <div class="space-y-1 > *">
-                    <p class="text-xs md:text-lg">Valentyna Willard</p>
-                    <p class="text-xs md:text-lg">ISA Certificate Arborist</p>
-                    <p class="text-xs md:text-lg">CERT ID: FL-10042A</p>
-                </div>
-            </div>
-        </div>
-
-        <!--  -->
-
-        <!-- This is the main container -->
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <!-- Services section -->
-            <div class="md:col-span-1">
-                <div class="flex flex-row gap-6 ml-3 h-fit">
-                    <div class="w-32">
-                        <img class="w-full" src="./img/SCALABLE logo.svg" alt="" />
-                    </div>
-
-                    <div class="flex flex-col justify-center w-3/4">
-                        <div class="w-11/12 bg-[#C2D6B2] p-3 h-full">
-                            <h1 class="mb-1 text-sm font-bold">SERVICES PROVIDED:</h1>
-                            <ul class="pl-3 list-disc">
-                                <li class="text-xs"><strong>Evaluation</strong> Reports</li>
-                                <li class="text-xs"><strong>Relocation</strong> Reports</li>
-                                <li class="text-xs"><strong>Tree Risk</strong> Reports</li>
-                                <li class="text-xs"><strong>Root Protection Zone</strong> (TPZ) Evaluations</li>
-                                <li class="text-xs"><strong>Mitigation</strong> Reports</li>
-                                <li class="text-xs"><strong>Invasive Species</strong> Reports</li>
-                            </ul>
-                        </div>
+            <div class="md:relative">
+                <!-- logo -->
+                <div class="flex flex-row justify-center w-full bg-white md:absolute md:bg-opacity-60 continer">
+                    <!-- 2xl: -->
+                    <img class="w-3/6 object-cover md:max-w-[200px] lg:max-w-[400px]" src="./img//logo.svg" alt="" />
+                    <div class="w-3/6 space-y-3 > * break-words flex flex-col justify-center">
+                        <p class="text-xs font-bold md:text-lg lg:text-3xl">ISA CERTIFIED ARBORIST <br />CERT ID:FL-10042A</p>
+                        <p class="text-xs font-bold md:text-lg lg:text-3xl">onetreearborist@gmail.com</p>
+                        <p class="text-xs font-bold md:text-lg lg:text-3xl">(407) 927-7722</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Map section -->
-            <div class="md:col-span-1 md:row-span-2">
+                <!-- image -->
                 <div>
-                    <!-- white bar -->
-                    <div class="pt-3 pl-3 mb-2 bg-white">
-                        <h1>AREA OF OPERATION</h1>
+                    <img class="object-cover w-full image" src="./img/hero1.png" alt="" />
+                </div>
+            </div>
+            <!-- who is? -->
+            <div class="flex justify-center bg-ternary">
+                <div class="p-3 space-y-5 md:max-w-md">
+                    <h1 class="text-xl"><strong>WHO IS ONE TREE ARBORIST?</strong></h1>
+                    <p class="text-sm">An arborist is a trained specialist in the science of planting, caring for, and maintaining trees.</p>
+                    <p class="pb-4 text-sm">
+                        <b>One Tree Arborist specializes in tree health and safety. </b>We are qualified to conduct a variety of reports such as health evaluations, risk assessments, and invasive
+                        species identification to ensure the longevity and safety of trees within our urban and natural environments.
+                    </p>
+                </div>
+            </div>
+
+            <div class="2xl:flex 2xl:justify-center">
+                <div class="2xl:w-2/4 md:grid md:grid-cols-3 md:mr-32 md:ml-32">
+                    <!-- IS Certified -->
+                    <div class="md:rounded-3xl md:border-4 md:border-secondary md:mt-20 md:mb-20 md:ml-10 md:mr-10 lg:mt-40 lg:mb-40 lg:ml-5 lg:mr-5 lg:p-5">
+                        <!-- certification border desktop-->
+
+                        <div class="mb-3 text-center space-y-3 > * mt-3">
+                            <h1 class="text-xl"><strong>ISA CERTIFIED ARBORIST</strong></h1>
+                            <h1 class="text-xl"><strong>V. WILLARD</strong></h1>
+                            <h1 class="text-xl"><strong>FL-10042A</strong></h1>
+                        </div>
+
+                        <div class="flex flex-col flex-wrap content-center">
+                            <img src="./img/SCALABLE logo.svg" class="w-2/4" alt="" />
+                        </div>
                     </div>
-                    <!-- map -->
-                    <div class="flex gap-4 ml-3">
-                        <div class="w-[65%]">
-                            <img src="./img/Map-01.svg" alt="" />
+                    <!-- services provided  -->
+                    <div class="space-y-3 > * m-4 p-6 rounded-3xl border-4 border-secondary bg-white pb-16 md:mt-20 md:mb-20 md:ml-10 md:mr-10 lg:mt-40 lg:mb-40 lg:ml-5 lg:mr-5 lg:p-5">
+                        <h1 class="text-xl"><b>SERVICE PROVIDED</b></h1>
+                        <ul class="ml-3 list-disc rounded-lg">
+                            <li><b>Evaluation</b>Reports</li>
+                            <li><b>Relocation</b>Reports</li>
+                            <li>
+                                <b>Tree Risk</b>Reports:
+                                <p>Level 1 & 2</p>
+                            </li>
+                            <li>
+                                <b>Root Protection Zone </b>
+                                (TPZ) evaluations
+                            </li>
+                            <li><b>Mitigation</b>Reports</li>
+                            <li><b>Invasive Species </b>Reports</li>
+                        </ul>
+                    </div>
+                    <!-- mission -->
+                    <div class="m-5 space-y-3 md:rounded-3xl md:border-4 md:border-secondary md:mt-20 md:mb-20 md:ml-10 md:mr-10 lg:mt-40 lg:mb-40 lg:ml-5 lg:mr-5 lg:p-5">
+                        <h1 class="text-xl text-center"><b>OUR MISSION</b></h1>
+                        <p>
+                            At ONE TREE ARBORIST it is our duty to safeguard the health of trees and landscape. We provide detailed care reports and expert evaluations to ensure the well-being of your
+                            green assets. Let's work together to maintain the environmental integrity of your property and recognized its’ worth. Our commitment is to preserve a natural haven for you
+                            to enjoy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- area of operation -->
+            <div class="pt-6 pb-6 pl-3 mt-3 mb-6 text-white bg-secondary">
+                <h1 class="mb-2 text-xl text-center"><strong>AREA OF OPERATION</strong></h1>
+                <div class="items-center justify-center md:flex md:items-start">
+                    <div class="w-full p-3 md:max-w-md">
+                        <img class="object-cover" src="./img/Map-01.svg" alt="" />
+                    </div>
+                    <ul class="pl-6 list-disc">
+                        <li>City of Miami</li>
+                        <li>Miami Beach</li>
+                        <li>Coral Gables</li>
+                        <li>Ft Lauderdale</li>
+                        <li>North Miami Beach</li>
+                        <li>South Miami Beach</li>
+                        <li>Homestead</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- q&a -->
+            <div class="m-3 space-y-3 md:max-w-md md:mx-auto">
+                <h1 class="textl-xl text-secondary"><strong>DO I NEED ONE TREE ARBORIST HELP?</strong></h1>
+                <!-- <i class="arrow fa-solid fa-arrow-right"></i> -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Planing construction activities on site that might involve trees or palms?</strong></h1>
+                        <div class="w-1/5 p-2 text-center cursor-pointer">
+                            <i class="arrow fa-solid fa-angle-down"></i>
                         </div>
-                        <div class="w-[35%]">
-                            <div class="bg-[#C2D6B2] w-11/12 h-full">
-                                <ul class="pl-6 pt-4 list-disc space-y-1 > *">
-                                    <li class="text-xs md:text-lg">Coral Gables</li>
-                                    <li class="text-xs md:text-lg">City of Miami</li>
-                                    <li class="text-xs md:text-lg">Kendal</li>
-                                    <li class="text-xs md:text-lg">Miami</li>
-                                    <li class="text-xs md:text-lg">Pembroke Pines</li>
-                                    <li class="text-xs md:text-lg">Hollywood</li>
-                                    <li class="text-xs md:text-lg">Ft. Lauderdale</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2 class="response_title"><strong>EVALUATION REPORT</strong></h2>
+                        <p class="response_body">
+                            <span class="underline">Can provide a comprehensive assessment of all trees and palms on your property.</span> It is typically needed when determining the health,structure,
+                            and overall condition of trees for property owners, developers, or municipal planning. This can inform management decisions, preservation strategies, and serve as baseline
+                            documentation for future reference. <span class="underline">Often needed prior to construction on site.</span>
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Looking to relocate a tree or palm on your property?</strong></h1>
+                        <div class="w-1/5 p-2 text-center">
+                            <i class="arrow fa-solid fa-angle-down"></i>
                         </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2><strong>RELOCATION REPORT</strong></h2>
+                        <p>
+                            <span class="underline">It is essential when a tree is to be preserved but must be moved</span> due to construction, landscaping, or other land development activities or
+                            property owner’s desires. This report outlines the health of the tree and evaluates the tree’s ability to withstand relocation and potential severe damage to the crown and
+                            the root zone. <span class="underline">It includes feasibility, process, and care requirements for relocating trees to ensure their survival.</span>
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Worried for your safety near trees? Is there a potential tree that is leaning or appears to be compromised?</strong></h1>
+                        <div class="w-1/5 p-2 text-center">
+                            <i class="arrow fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2><strong>TREE RISK REPORTS</strong></h2>
+                        <p>
+                            <span class="underline">Are visual assessments to identify obvious hazards and determine the risk category of a tree.</span> These are often re- quired when a tree’s health
+                            appears compromised or when routine checks are conducted. Level 1 is a visual assessment to determine obvious defects. Level 2 are advanced assesments that will include in
+                            depth review of conditions observed through the Level 1 report. <span class="underline">These are needed when trees show signs of distress or potential failure</span> that
+                            were mentioned in the Level 1 assessment, or for insurance purposes where de- tailed documentation is required.
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Planing or currently starting construction and need a way to preserve the tree?</strong></h1>
+                        <div class="w-1/5 p-2 text-center">
+                            <i class="arrow fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2><strong>ROOT PROTECTION ZONE (TPZ) EVALUATION</strong></h2>
+                        <p>
+                            TPZ evaluations analyze the critical area around the trees roots that should remain undisturbed to preserve a tree's health and stability.
+                            <span class="underline"
+                                >Evaluations are necessary before construction or any ground disturbing activities near trees to prevent damage that can lead to tree decline or failure.</span
+                            >
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Looking for ways to o set the loss of valuable trees?</strong></h1>
+                        <div class="w-1/5 p-2 text-center">
+                            <i class="arrow fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2><strong>MITIGATION REPORT</strong></h2>
+                        <p>
+                            These reports outline the measures needed to offset the impact of development on existing trees. It is required when construction or other development activities cannot
+                            avoid impacting trees and provide a plan for compensation, such as planting new trees or restoring damaged areas.
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Trees spreading too fast? They could be invasive, not just unruly.</strong></h1>
+                        <div class="w-1/5 p-2 text-center">
+                            <i class="arrow fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2><strong>INVASIVE SPECIES REPORT</strong></h2>
+                        <p>
+                            <span class="underline">Is to identify non-native plants that may harm the local ecosystem.</span> These are crucial for ecological management, to plan for the removal of
+                            invasive species, and to prevent their spread. Such reports are often required by local conservation laws or in preparation for restoration projects. FISC (Florida Invasive
+                            Species Council) researches and updates the invasive list of plants in Florida. In addition many municipalities of Florida pay attention to species that are highly invasive
+                            in regions’ habitats and recommend and/or require their removal by property owners.
+                        </p>
+                    </div>
+                </div>
+                <!--  -->
+                <div>
+                    <div class="flex">
+                        <h1 class="w-4/5 mb-3"><strong>Need to know how much your trees and landscape cost as assets?</strong></h1>
+                        <div class="w-1/5 p-2 text-center">
+                            <i class="arrow fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="response space-y-3 > * hidden">
+                        <h2><strong>APPRAISAL REPORT</strong></h2>
+                        <p>
+                            <span class="underline">Is to evaluate a tree's monetary value, factoring in species, size, health, and location.</span> It's essential for insurance claims, tax
+                            assessments, property sales, and importantly, eminent domain cases. We can provide accurate valuations to ensure property owner receives a fair compensation for tree and
+                            landscape assets during eminent domain proceedings.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Footer section -->
-            <div class="order-last md:order-none md:col-start-1 md:col-end-2">
-                <!-- footer -->
-                <div>
-                    <div class="pt-3 pl-3 mt-3 mb-2 bg-white">
-                        <h1>CONTACT INFORMATION</h1>
-                    </div>
+            <!-- comments -->
+            <div class="m-3 space-y-3 md:mx-auto md:max-w-md">
+                <h1 class="text-secondary"><strong class="text-xl">What people are saying?</strong></h1>
+                <div class="p-4 space-y-3 border-4 review_container rounded-xl rounded-3xl border-secondary">
+                    <h1 class="text-base"><strong>Miami Beach Root Protection Zone Evaluation</strong></h1>
+                    <p class="text-sm review_body">
+                        "Just wanted to give a shout out for the exceptional work done on my rental property. The root protection zone evalu- ation was spot-on — professional, quick, and detailed. It
+                        made navigating the city's requirements a breeze, all thanks to their expertise. Highly recommend their ser- vices!"
+                    </p>
+                    <p class="w-full text-xs text-right"><strong>- Robert</strong></p>
+                </div>
+            </div>
 
-                    <!-- footer -->
+            <!-- footer -->
+            <div class="flex p-3 bg-white">
+                <img class="object-cover w-2/5 md:w-[200px]" src="./img/logo.svg" alt="" />
+                <div class="w-3/5 space-y-3 md:flex md:flex-col md:justify-center">
+                    <h1 class="text-sm text-lg text-secondary md:text-xl">CONTACT INFORMATION</h1>
                     <div>
-                        <p class="ml-3 underline"><i class="mr-2 fa-solid fa-envelope"></i><a href="mailto:onetreearbortist@gmail.com">onetreearborist@gmail.com</a></p>
-                        <p class="ml-3"><i class="mr-2 fa-solid fa-phone"></i><span>(407) 927-7722</span></p>
+                        <p class="text-xs">(407) 927-7722</p>
+                        <p class="text-xs"><a href="mailto:onetreearborist@gmail.com">onetreearborist@gmail.com</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script>
+        const img = document.querySelector('.image');
+        const arrOfImages = ['./img/hero1.png', './img/hero2.png', './img/hero3.png'];
+        counter = 0;
+        const setImage = () => {
+            img.src = arrOfImages[counter];
+            counter = (counter + 1) % arrOfImages.length;
+        };
+
+        setInterval(setImage, 3000);
+
+        const arrows = document.querySelectorAll('.arrow');
+        const responses = document.querySelectorAll('.response');
+        arrows.forEach((arrow, index) => {
+            arrow.addEventListener('click', () => {
+                // Toggle the response visibility
+                responses[index].classList.toggle('hidden');
+                arrow.classList.toggle('fa-angle-down');
+                arrow.classList.toggle('fa-angle-up');
+            });
+        });
+
+        const reviews = [
+            {
+                title: 'Miami Beach Root Protection Zone Evaluation',
+                review: "Just wanted to give a shout out for the exceptional work done on my rental property. The root protection zone evaluation was spot-on — professional, quick, and detailed. It made navigating the city's requirements a breeze, all thanks to their expertise. Highly recommend their services",
+                author: 'Robert',
+            },
+            {
+                title: 'Ft. Lauderdale - Tree Risk Report',
+                review: "The report was a game-changer. I was really worried about the upcoming hurricane season and the old tree in the backyard. Although it's sad we had to remove it, I now have peace of mind. We've planted new, safer trees, and I rest easy knowing my kids can play outside without worry. Thank you.",
+                author: 'David',
+            },
+            {
+                title: 'City of Miami - Relocation Report',
+                review: 'One Tree Arborist guided us in safely moving those palms and the large black olive tree. Made my job a whole lot smoother!',
+                author: 'Mr. Rodriguez - Landscape Contractor',
+            },
+            {
+                title: 'Coral Gables - Appraisal Report',
+                review: 'My property was involved in an eminent domain case, and I had to part with one of my beautiful Oak trees in the front yard. One Tree Arborist ensured I re- ceived fair compensation with a thorough appraisal. Appreciate their expertise!',
+                author: 'Evelyn',
+            },
+        ];
+
+        const reviewsContainer = document.querySelector('.review_container');
+        const reviewBody = document.querySelector('.review_body');
+
+        counter = 0;
+        const setReview = () => {
+            reviewsContainer.firstElementChild.innerHTML = `<strong>${reviews[counter].title}</strong>`;
+            reviewBody.innerHTML = reviews[counter].review;
+            reviewsContainer.lastElementChild.innerHTML = `<strong>- ${reviews[counter].author}</strong>`;
+            counter = (counter + 1) % arrOfImages.length;
+        };
+
+        setInterval(setReview, 10000);
+    </script>
 </html>
