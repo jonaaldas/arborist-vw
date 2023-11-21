@@ -125,7 +125,7 @@
             <div class="m-3 space-y-3 md:max-w-2xl md:mx-auto md:pt-28 md:pb-18">
                 <h1 class="textl-xl text-secondary md:text-2xl"><strong>DO I NEED ONE TREE ARBORIST HELP?</strong></h1>
                 <!-- <i class="arrow fa-solid fa-arrow-right"></i> -->
-                <div class="md:mb-3">
+                <div>
                     <div class="flex">
                         <h1 class="w-4/5 mb-3"><strong>Planing construction activities on site that might involve trees or palms?</strong></h1>
                         <div class="w-1/5 p-2 text-right cursor-pointer">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="md:mb-3">
+                <div>
                     <div class="flex">
                         <h1 class="w-4/5 mb-3"><strong>Looking to relocate a tree or palm on your property?</strong></h1>
                         <div class="w-1/5 p-2 text-right cursor-pointer">
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="md:mb-3">
+                <div>
                     <div class="flex">
                         <h1 class="w-4/5 mb-3"><strong>Worried for your safety near trees? Is there a potential tree that is leaning or appears to be compromised?</strong></h1>
                         <div class="w-1/5 p-2 text-right cursor-pointer">
@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="md:mb-3">
+                <div>
                     <div class="flex">
                         <h1 class="w-4/5 mb-3"><strong>Planing or currently starting construction and need a way to preserve the tree?</strong></h1>
                         <div class="w-1/5 p-2 text-right cursor-pointer">
@@ -195,7 +195,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="md:mb-3">
+                <div>
                     <div class="flex">
                         <h1 class="w-4/5 mb-3"><strong>Looking for ways to o set the loss of valuable trees?</strong></h1>
                         <div class="w-1/5 p-2 text-right cursor-pointer">
@@ -211,7 +211,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="md:mb-3">
+                <div>
                     <div class="flex">
                         <h1 class="w-4/5 mb-3"><strong>Trees spreading too fast? They could be invasive, not just unruly.</strong></h1>
                         <div class="w-1/5 p-2 text-right cursor-pointer">
@@ -285,11 +285,13 @@
         setInterval(setImage, 45000);
 
         const arrows = document.querySelectorAll('.arrow');
+        const commentsContainer = document.querySelectorAll('.comment_container');
         const responses = document.querySelectorAll('.response');
         arrows.forEach((arrow, index) => {
             arrow.addEventListener('click', () => {
                 // Toggle the response visibility
                 responses[index].classList.toggle('hidden');
+                responses[index].classList.add('mb-14');
                 arrow.classList.toggle('fa-angle-down');
                 arrow.classList.toggle('fa-angle-up');
             });
